@@ -131,7 +131,8 @@
           <ul class="images__list">
             <li class="images__item">
               <img class="images__img"
-                src="images/img.jpg"
+              srcset="./images/desktop/features-1.jpg 1x, ./images/desktop/features-1-2x.jpg 2x"
+              src="./images/desktop/features-1.jpg"
                 alt="крупным планом-изображение-программист-работающий-его-стол-офис"
                 width="370"
               />
@@ -141,7 +142,8 @@
             </li>
             <li class="images__item">
               <img class="images__img"
-                src="images/img1.jpg"
+              srcset="./images/desktop/features-2.jpg 1x, ./images/desktop/features-2-2x.jpg 2x"
+              src="./images/desktop/features-2.jpg"
                 alt="веб-интерфейс-дизайнеры-разрабатывают-приложение-смартфоны-команда-создатели-работает-интерфейс-мобильные телефоны"
                 width="370"
               />
@@ -151,7 +153,8 @@
             </li>
             <li class="images__item">
               <img class="images__img"
-                src="images/img2.jpg"
+              srcset="./images/desktop/features-3.jpg 1x, ./images/desktop/features-3-2x.jpg 2x"
+              src="./images/desktop/features-3.jpg"
                 alt="реативный-художник-веб-дизайн-с-рабочим-выбором-цвета-графическим-планшетом"
                 width="370"
               />
@@ -167,7 +170,27 @@
           <h2>Наша команда</h2>
           <ul class="cards">
             <li class="cards__card">
-              <img class="cards__img" src="images/img5.jpg" alt="Ігор Дем'яненко" width="270" />
+              <picture>
+                <source
+                srcset="./images/desktop/igor.jpg 1x, ./images/desktop/igor-2x.jpg 2x"
+                media="(min-width: 1200px)"
+              />
+                <source
+                srcset="./images/tablet/igor.jpg 1x, ./images/tablet/igor-2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+                <source
+                  srcset="./images/mobile/igor.jpg 1x, ./images/mobile/igor-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+               
+                <img
+                  class="cards__img"
+                  src="./images/mobile/igor.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
+            
               <div class="cards__wrap">
                 <h3>Ігор Дем'яненко</h3>
                 <p class="cards__text">Product Designer</p>
@@ -200,7 +223,21 @@
               </div>
             </li>
             <li class="cards__card">
-              <img class="cards__img" src="images/img4.jpg" alt="Ольга Рєпіна" width="270" />
+              <picture>
+                <source
+                  srcset="./images/mobile/olga.jpg 1x, ./images/mobile/olga-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/tablet/olga.jpg 1x, ./images/tablet/olga-2x.jpg 2x"
+                  media="(min-width: 768px) and (max-width:1200px)"
+                />
+                <source
+                  srcset="./images/desktop/olga.jpg 1x, ./images/desktop/olga-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img class="cards__img" src="./images/mobile/olga.jpg" alt="Ольга Репіна" />
+              </picture>
               <div class="cards__wrap">
                 <h3>Ольга Рєпіна</h3>
                 <p class="cards__text">Frontend Developer</p>
@@ -233,7 +270,25 @@
               </div>
             </li>
             <li class="cards__card">
-              <img class="cards__img" src="images/img3.jpg" alt="Микола Тарасов" width="270" />
+              <picture>
+                <source
+                  srcset="./images/mobile/nikolai.jpg 1x, ./images/mobile/nikolai-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/tablet/nikolai.jpg 1x, ./images/tablet/nikolai-2x.jpg 2x"
+                  media="(min-width: 768px) and (max-width:1200px)"
+                />
+                <source
+                  srcset="./images/desktop/nikolai.jpg 1x, ./images/desktop/nikolai-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="cards__img"
+                  src="./images/mobile/nikolai.jpg"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="cards__wrap">
                 <h3>Микола Тарасов</h3>
                 <p class="cards__text">Marketing</p>
@@ -266,7 +321,27 @@
               </div>
             </li>
             <li class="cards__card last-child">
-              <img class="cards__img" src="images/img6.jpg" alt="Михайло Єрмаков" width="270" />
+              <picture>
+                <source
+                  srcset="./images/mobile/michael.jpg 1x, ./images/mobile/michael-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/tablet/michael.jpg 1x, ./images/tablet/michael-2x.jpg 2x"
+                  media="(min-width: 768px) and (max-width:1200px)"
+                />
+                <source
+                  srcset="./images/desktop/michael.jpg 1x, ./images/desktop/michael-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="cards__img"
+                  src="./images/mobile/michael.jpg"
+                  alt="Михайло Ермаков"
+                />
+              </picture>
+
+
               <div class="cards__wrap">
                 <h3>Михайло Єрмаков</h3>
                 <p class="cards__text">UI Designer</p>

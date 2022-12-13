@@ -101,6 +101,7 @@ nav{
 .contacts__link {
   color: $p-color;
   font-size: 12px;
+  line-height: 1.1;
 
 
 }
@@ -112,6 +113,10 @@ nav{
     flex-direction: row;
     gap: 30px;
     
+}
+.contacts__link{
+  font-size: 14px;
+  line-height: 1.1;
 }
 }
 @media screen and (min-width: 1200px){

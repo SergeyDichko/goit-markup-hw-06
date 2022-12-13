@@ -1,13 +1,24 @@
 .hero {
     padding: 118px 60px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img16.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero.jpg");
 
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero-2x.jpg");
+  }
+
 }
 @media (min-width : 1200px){
     .hero{
@@ -65,27 +76,27 @@ h1 {
     }
 }
 
-.columns {
+.columns__list {
     padding: 60px 0;
     
 }
 
-.columns__column {
+.columns__item {
     // vertical-align: top;
     margin-bottom: 30px;
 }
 @media (min-width: 768px){
-    .columns{
+    .columns__list{
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
     }
-    .columns__column{
+    .columns__item{
         width: 354px;
     }
 }
 @media (min-width: 1200px) {
-    .columns__column{
+    .columns__item{
         
         width: 270px;
     }
@@ -283,10 +294,10 @@ h3 {
 .clients {
     padding: 60px 15px;
 }
-.clients ul{
+.clients__list{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
     gap: 30px;
 
 }
@@ -307,10 +318,6 @@ h3 {
   
 
     padding: 16px 52px;
-
-    &:last-child {
-        margin-right: 0;
-    }
 
     &:hover,
     &:focus {

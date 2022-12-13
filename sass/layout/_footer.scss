@@ -68,16 +68,17 @@ footer p {
 }
 @media (min-width: 768px){
     .networks{
-     padding-top: 0;
+     padding: 0;
     }
    
         .footer__wrap{
             display: flex;
             justify-content: space-around;
-            padding-bottom: 60px;
+            margin-bottom: 60px;
         }
     
 }
+
 .networks__link {
     background-color: rgba(255, 255, 255, 0.1);
     fill: $font-color;

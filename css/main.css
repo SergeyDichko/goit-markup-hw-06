@@ -231,6 +231,12 @@ a {
   color: #212121;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
@@ -346,6 +352,7 @@ nav {
   .contacts__link {
     color: #757575;
     font-size: 12px;
+    line-height: 1.1;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -353,6 +360,10 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 30px;
+  }
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.1;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -445,15 +456,21 @@ button {
 
 .hero {
   padding: 118px 60px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img16.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero-2x.jpg");
+  }
+}
 @media (min-width: 1200px) {
   .hero {
     padding: 200px 0;
@@ -502,26 +519,26 @@ h1 {
     padding: 10px 32px;
   }
 }
-.columns {
+.columns__list {
   padding: 60px 0;
 }
 
-.columns__column {
+.columns__item {
   margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
-  .columns {
+  .columns__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
-  .columns__column {
+  .columns__item {
     width: 354px;
   }
 }
 @media (min-width: 1200px) {
-  .columns__column {
+  .columns__item {
     width: 270px;
   }
 }
@@ -695,9 +712,10 @@ h3 {
   padding: 60px 15px;
 }
 
-.clients ul {
+.clients__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -712,9 +730,6 @@ h3 {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   padding: 16px 52px;
-}
-.clients__link:last-child {
-  margin-right: 0;
 }
 .clients__link:hover, .clients__link:focus {
   border-color: #2196F3;
@@ -738,28 +753,41 @@ main {
 }
 
 @media (min-width: 480px) {
-  .all__container {
-    padding: 60px 0;
+  .control {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .control {
+    padding-bottom: 60px;
+    padding-top: 60px;
   }
 }
 @media (min-width: 1200px) {
-  .all__container {
-    padding: 94px 0;
+  .control {
+    padding-bottom: 94px;
+    padding-top: 94px;
   }
 }
 @media (min-width: 480px) {
-  .buttons {
+  .control__list {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .control__list {
     padding-bottom: 40px;
   }
 }
 @media (min-width: 768px) {
-  .buttons {
+  .control__list {
     display: flex;
     justify-content: center;
   }
 }
 @media (min-width: 1200px) {
-  .buttons {
+  .control__list {
     padding-bottom: 50px;
   }
 }
@@ -815,6 +843,11 @@ main {
     transform: translateY(358px);
   }
 }
+@media (max-width: 480px) {
+  .all__text {
+    transform: translateY(358px);
+  }
+}
 .all__links {
   display: block;
   text-decoration: none;
@@ -846,7 +879,7 @@ main {
   margin-bottom: 4px;
 }
 
-.buttons__item {
+.control__item {
   margin-right: 8px;
   display: inline-block;
   margin-bottom: 15px;
@@ -911,12 +944,12 @@ footer p {
 
 @media (min-width: 768px) {
   .networks {
-    padding-top: 0;
+    padding: 0;
   }
   .footer__wrap {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 }
 .networks__link {
@@ -1026,6 +1059,12 @@ footer p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 100vw;
+    height: 100vh;
+  }
+}
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.3);
   transition: transform 2000ms linear;
@@ -1208,7 +1247,7 @@ label svg {
 .tel {
   display: block;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 8vw;
   line-height: 40px;
   /* identical to box height */
   letter-spacing: 0.02em;
@@ -1229,6 +1268,7 @@ label svg {
 .menu-container__socials {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .menu-container__socials--item {
